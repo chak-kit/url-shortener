@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Shortening } from './models/shortening-response.interface';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -16,6 +17,13 @@ export class StorageService {
     this.updateStorage(this.shortenings);
   }
 
+  deleteShortening(shortening: Shortening) {
+    const index = this.shortenings.findIndex(value => value.id === shortening.id);
+    this.shortenings.splice(index, 1);
+    this.updateStorage(this.shortenings);
+  }
+
+
   getShortenings(): Shortening[] {
     const shorteningsString = localStorage.getItem('shortenings');
 
@@ -30,7 +38,13 @@ export class StorageService {
     }
   }
 
+  getShorteningById(id: string): Shortening {
+    return this.getShortenings().filter(short => short.id === id)[0];
+  }
+
   updateStorage(shortenings: Shortening[]): void {
     localStorage.setItem('shortenings', JSON.stringify(shortenings));
   }
+
+
 }

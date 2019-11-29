@@ -1,0 +1,17 @@
+<div class="wrapper">
+  <div class="card-items">
+    <h2>{{ shortening.name }}</h2>
+    <button (click)="delete()">Delete</button>
+  </div>
+  <ul>
+    <li><span> Original link: </span> <a [href]="shortening.original_link" target="_blank">
+      {{shortening.original_link}} </a></li>
+    <li><span>Share link: </span><a [href]="shortening.full_share_link" target="_blank"> {{ shortening.full_share_link
+      }} </a></li>
+    <li><span>Short link: </span> <a [href]="shortening.full_short_link" target="_blank"> {{ shortening.full_short_link
+      }} </a></li>
+    <li><span> Short link #2: </span><a [href]="shortening.full_short_link2 " target="_blank"> {{
+      shortening.full_short_link2 }} </a></li>
+  </ul>
+</div>
+<router-outlet></router-outlet>
