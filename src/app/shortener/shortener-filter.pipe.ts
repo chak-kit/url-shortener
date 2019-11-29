@@ -12,8 +12,9 @@ export class ShortenerFilterPipe implements PipeTransform {
     }
 
     return shortenings.filter(sort =>
-      sort.name.toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1);
+      sort.name.toLowerCase().indexOf(searchTerm.toLowerCase()) === 0);
   }
+
 }
 
 
