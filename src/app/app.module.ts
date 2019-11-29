@@ -9,6 +9,7 @@ import { HeaderComponent } from './header/header.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { ShortenerComponent } from './shortener/shortener.component';
 import { DetailsComponent } from './details/details.component';
+import {ShortenerFilterPipe} from './shortener/shortener-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { DetailsComponent } from './details/details.component';
     HeaderComponent,
     WelcomeComponent,
     ShortenerComponent,
-    DetailsComponent
+    DetailsComponent,
+    ShortenerFilterPipe
   ],
   imports: [
     BrowserModule,
