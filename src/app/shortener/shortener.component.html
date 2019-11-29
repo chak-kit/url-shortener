@@ -1,5 +1,7 @@
 <h1>Shortener</h1>
-
+<div>
+  <input type="text" class="search-input" placeholder="Search By Name" [(ngModel)]="searchTerm">
+</div>
 <div>
   <input type="text" placeholder="URL" [(ngModel)]='url'>
   <input type="text" placeholder="Name" [(ngModel)]='name'>
@@ -7,7 +9,7 @@
 </div>
 
 <ul>
-  <li *ngFor="let short of shortenings" class="card card-items">
+  <li *ngFor="let short of shortenings | shortenerFilter:searchTerm" class="card card-items">
     <h3>{{ short.name }}</h3>
     <div class="short-buttons">
       <button class="details"><a routerLink="/shortener/{{short.id}}"> View details </a></button>

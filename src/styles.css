@@ -23,6 +23,7 @@ input {
   padding: 10px;
   border-radius: 4px;
   margin-right: 20px;
+  font-size: 14px;
 }
 
 input::placeholder {
@@ -33,6 +34,10 @@ a {
   color: #fff;
   text-decoration: none;
   cursor: pointer;
+}
+
+h1{
+  font-size: 40px;
 }
 
 h2 {
@@ -77,6 +82,23 @@ button {
 
 }
 
+div > img{
+  max-width: 100%;
+}
+
+.convert{
+  display: block;
+  margin: 20px auto;
+  padding: 15px 30px;
+  width: fit-content;
+  font-size: 18px;
+}
+
+
+.search-input{
+  width: 200px;
+  margin-bottom: 20px;
+}
 /* utils */
 .mb1 {
   margin-bottom: 10px;

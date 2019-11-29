@@ -13,6 +13,7 @@ export class ShortenerComponent implements OnInit {
   url = '';
   name = '';
   shortenings: Shortening[] = [];
+  searchTerm: string;
 
   constructor(
     private shortAPI: ShortenerApiService,
